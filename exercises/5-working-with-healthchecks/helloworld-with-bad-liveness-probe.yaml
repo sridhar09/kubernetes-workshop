@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: helloworld-deployment-with-bad-liveness-probe
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: helloworld
-        image: karthequian/helloworld:latest
+        image: docker/getting-started
         ports:
         - containerPort: 80
         livenessProbe:
